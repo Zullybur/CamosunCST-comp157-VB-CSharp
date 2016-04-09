@@ -1,0 +1,11 @@
+C:\Users\Matthew Casiro\OneDrive\Bootcamp Share\comp157\lab01\lab01\bin\Debug\lab01.exe.config
+C:\Users\Matthew Casiro\OneDrive\Bootcamp Share\comp157\lab01\lab01\bin\Debug\lab01.exe
+C:\Users\Matthew Casiro\OneDrive\Bootcamp Share\comp157\lab01\lab01\bin\Debug\lab01.pdb
+C:\Users\Matthew Casiro\OneDrive\Bootcamp Share\comp157\lab01\lab01\bin\Debug\lab01.xml
+C:\Users\Matthew Casiro\OneDrive\Bootcamp Share\comp157\lab01\lab01\obj\Debug\lab01.vbprojResolveAssemblyReference.cache
+C:\Users\Matthew Casiro\OneDrive\Bootcamp Share\comp157\lab01\lab01\obj\Debug\lab01.Form1.resources
+C:\Users\Matthew Casiro\OneDrive\Bootcamp Share\comp157\lab01\lab01\obj\Debug\lab01.Resources.resources
+C:\Users\Matthew Casiro\OneDrive\Bootcamp Share\comp157\lab01\lab01\obj\Debug\lab01.vbproj.GenerateResource.Cache
+C:\Users\Matthew Casiro\OneDrive\Bootcamp Share\comp157\lab01\lab01\obj\Debug\lab01.exe
+C:\Users\Matthew Casiro\OneDrive\Bootcamp Share\comp157\lab01\lab01\obj\Debug\lab01.xml
+C:\Users\Matthew Casiro\OneDrive\Bootcamp Share\comp157\lab01\lab01\obj\Debug\lab01.pdb
