@@ -1,4 +1,9 @@
-﻿Public Class Form1
+﻿' Program to display shapes in various colours
+' Created by: Matthew Casiro
+' Created on: April 14 2016
+Public Class Form1
+
+    ' Print out a square to the display window when the Square button is clicked
     Private Sub btnSquare_Click(sender As Object, e As EventArgs) Handles btnSquare.Click
         Dim strOutput As String = ""
         Dim intSize As Integer = txtSize.Text
@@ -29,6 +34,7 @@
         txtDisplay.Text = strOutput
     End Sub
 
+    ' Print out a trianlge to the display window when the Triangle button is clicked
     Private Sub btnTriangle_Click(sender As Object, e As EventArgs) Handles btnTriangle.Click
         Dim strOutput As String = ""
         Dim intSize As Integer = txtSize.Text
@@ -45,6 +51,7 @@
         txtDisplay.Text = strOutput
     End Sub
 
+    ' Print out a circle to the display window when the Circle button is clicked
     Private Sub btnCircle_Click(sender As Object, e As EventArgs) Handles btnCircle.Click
         Dim strOutput As String = ""
         Dim intSize As Integer = txtSize.Text
@@ -69,12 +76,14 @@
         txtDisplay.Text = strOutput
     End Sub
 
+    ' Adjust the character to be printed when the user changes the txtInputChar input
     Private Sub txtInputChar_TextChanged(sender As Object, e As EventArgs) Handles txtInputChar.TextChanged
         If txtInputChar.Text.Length > 1 Then
             txtInputChar.Text = txtInputChar.Text.Substring(0, 1)
         End If
     End Sub
 
+    ' Populate the pre-set colour list on form load
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         lstColour.Items.Add("Black")
         lstColour.Items.Add("Red")
@@ -83,6 +92,7 @@
         lstColour.SelectedIndex = 0
     End Sub
 
+    ' Update the foreground colour to match user selection
     Private Sub lstColour_SelectedIndexChanged(sender As Object, e As EventArgs) Handles lstColour.SelectedIndexChanged
         Dim intColour As Integer = lstColour.SelectedIndex
         Select Case intColour
@@ -99,6 +109,7 @@
         End Select
     End Sub
 
+    ' Open dialog for colour selection when Other Colours button is clicked
     Private Sub btnOtherColours_Click(sender As Object, e As EventArgs) Handles btnOtherColours.Click
         Dim dlgColour As New ColorDialog()
         dlgColour.AllowFullOpen = False
@@ -110,6 +121,7 @@
         End If
     End Sub
 
+    ' Close progam when Exit button is clicked
     Private Sub btnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click
         Application.Exit()
     End Sub
