@@ -36,6 +36,7 @@ Partial Class Form1
         Me.nudX2 = New System.Windows.Forms.NumericUpDown()
         Me.nudY1 = New System.Windows.Forms.NumericUpDown()
         Me.nudX1 = New System.Windows.Forms.NumericUpDown()
+        Me.lblArea = New System.Windows.Forms.Label()
         CType(Me.pbxDrawing, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.nudY4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.nudX4, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -192,11 +193,25 @@ Partial Class Form1
         Me.nudX1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         Me.nudX1.Value = New Decimal(New Integer() {30, 0, 0, 0})
         '
+        'lblArea
+        '
+        Me.lblArea.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.lblArea.AutoSize = True
+        Me.lblArea.Location = New System.Drawing.Point(610, 435)
+        Me.lblArea.Name = "lblArea"
+        Me.lblArea.Size = New System.Drawing.Size(77, 20)
+        Me.lblArea.TabIndex = 28
+        Me.lblArea.Text = "Area: N/A"
+        Me.lblArea.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(824, 540)
+        Me.Controls.Add(Me.lblArea)
         Me.Controls.Add(Me.chkLoop)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
@@ -224,6 +239,7 @@ Partial Class Form1
         CType(Me.nudY1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.nudX1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
     Friend WithEvents pbxDrawing As System.Windows.Forms.PictureBox
@@ -240,5 +256,5 @@ Partial Class Form1
     Friend WithEvents nudX2 As System.Windows.Forms.NumericUpDown
     Friend WithEvents nudY1 As System.Windows.Forms.NumericUpDown
     Friend WithEvents nudX1 As System.Windows.Forms.NumericUpDown
-
+    Friend WithEvents lblArea As Label
 End Class
