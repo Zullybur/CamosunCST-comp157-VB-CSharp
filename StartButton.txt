@@ -1,0 +1,43 @@
+ foreach (Panel pnlPanel in lstPanels)
+             {
+                Controls.Remove(pnlPanel);
+             }
+           
+            intPanelCount = Convert.ToInt16(lstGridSize.SelectedItem);
+
+            // Resize the form to accommodate the grid size appropriately.
+
+            switch (intPanelCount)
+            {  
+                case 16:
+                    this.Height = 385;
+                    this.Width = 490;
+                    break;
+                case 25:
+                    this.Height = 500;
+                    this.Width = 584;
+                    break;
+                case 36:
+                case 49:
+                    // ... student to determine
+                    break;
+                case 81:
+                case 100:
+                    // ... student to determine
+                    break;
+                default:
+                    this.Height = 640;
+                    this.Width = 630;
+                    break;
+            }
+
+           // student to reset intCount, intClickCountCorrect, intClickCountIncorrect
+
+            DisplayPanels();
+
+           // Do not allow panel clicks until all the highlighted spots are shown.
+            blnReadyToClick = false;
+
+   	    // student to set timer interval to half second and enable 
+
+

@@ -1,0 +1,34 @@
+using System;
+
+namespace XOGame{
+  public class Turn{
+    private char _whoseTurn = 'X';
+    private int _turnsLeft = 9;
+
+    public char WhoseTurn{
+      get { return _whoseTurn; }
+    }
+
+    public int TurnsLeft{
+      get { return _turnsLeft; }
+    }
+
+    public void Flip(){
+      _whoseTurn = (_whoseTurn == 'X') ? 'O' : 'X';
+      _turnsLeft--;
+      if(_turnsLeft < 0)
+        throw new ApplicationException("TurnsLeft cannot go lower than 0");
+      OnFlipped();
+    }
+
+    public event EventHandler Flipped;
+
+    private void OnFlipped(){
+      EventHandler flipped = Flipped;
+      if (flipped != null)
+      {
+        flipped(this, EventArgs.Empty);
+      }
+    }
+  }
+}

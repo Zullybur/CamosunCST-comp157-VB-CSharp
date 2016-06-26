@@ -1,0 +1,64 @@
+private void Panel1_Click(object sender, EventArgs e) {
+      
+// Once all the randomly selected panels are complete, allow user to click on them.
+
+        if (blnReadyToClick) { 
+
+           // Determine which panel was just clicked.
+
+            String str = ((Panel)sender).Name.Substring(5);
+          
+          // Determine if clicked Panel is a hit.  Find the array index of intSpots 
+          // having the entry that matches the selected Panel.
+
+            int i = 0;
+
+            while ( i < intPanelCount  && intSpots[i] != Convert.ToInt16(str) - 1 ) {
+                i += 1;
+            }
+
+            if (i == intPanelCount)
+            {
+                intClickCountIncorrect += 1;
+                this.txtMessage.Text += "Click # " + 
+                             (intClickCountCorrect + intClickCountIncorrect).ToString() + 
+                             " is incorrect!\r\n";
+            }
+            else
+            {
+                // Found a correct panel.
+                intClickCountCorrect += 1;
+                this.txtMessage.Text += "Click # " + 
+                             (intClickCountCorrect + intClickCountIncorrect).ToString() + 
+                             " is correct!\r\n";
+
+                // student to highlight the Panel -- use ((Panel)sender)
+
+                // student to increment point counter
+                // student to update points label on form
+            }
+
+            // Make the panel unclickable so user does not click it again.
+
+            ((Panel)sender).Click -= new EventHandler( Panel1_Click );
+
+            // User has won if all correct panels have been clicked.
+
+            if (// student to determine ) {
+
+                this.txtMessage.Text += "You found them all!\r\n";
+
+                // Once the test is over, do not allow any more panel clicks.
+                blnReadyToClick = false;
+
+                // Add in points a second time but remove points for incorrect guesses.
+                // Student to update intPoints 
+
+                // student to update points label on form
+            }
+
+            // Scroll up the text in the textbox.
+            txtMessage.SelectionLength = 0;
+            txtMessage.SelectionStart = (txtMessage.Text).Length;
+            txtMessage.ScrollToCaret();
+        }
